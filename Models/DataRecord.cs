@@ -2,8 +2,7 @@ namespace CrashSafeConsoleApp.Models;
 
 public record DataRecord(Guid Id, string Value, DateTime CreatedAt)
 {
-    public override string ToString()
-        => $"{Id}|{CreatedAt:O}|{Value}";
+    public override string ToString() => $"{Id}|{CreatedAt:O}|{Value}";
 
     public static bool TryParse(string line, out DataRecord? record)
     {
